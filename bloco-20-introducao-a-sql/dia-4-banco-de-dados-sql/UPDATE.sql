@@ -33,3 +33,21 @@
                 WHEN 3 THEN 'CAROLINE' -- se actor_id = 3, alterar first_name para 'CAROLINE'
           ELSE first_name -- em todos os outros casos, mantém-se o first_name
   END);
+
+  -- Fazendo um UPDATE de forma sequencial:
+
+  -- Se o comando ORDER BY for usado juntamente com o UPDATE, os resultados serão alterados na ordem em que forem encontrados.
+  -- Se o comando LIMIT for usado em conjunto com o UPDATE, um limite será imposto na quantidade de resultados que podem ser alterados. Caso contrário, todos os resultados que satisfizerem a condição serão atualizados.
+
+  UPDATE nome_da_tabela
+  SET coluna1 = valor1, coluna2 = valor2
+  [WHERE condições]
+  [ORDER BY expressao [ ASC | DESC ]]
+  [LIMIT quantidade_resultados];
+
+  -- Exemplo:
+  UPDATE sakila.staff
+  SET password = 'FavorResetarSuaSenha123'
+  WHERE active = 1
+  ORDER BY last_update
+  LIMIT 2;
