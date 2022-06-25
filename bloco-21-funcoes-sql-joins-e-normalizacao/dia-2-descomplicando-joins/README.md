@@ -18,3 +18,9 @@
       ##### Se a query for composta de poucas linhas, utilize apenas a primeira letra ou a primeira sílaba para representar a coluna.
       ##### Ex.: actor -> "A" ou "act"
       ##### Caso a query tenha várias linhas, é recomendado utilizar nomes mais descritivos para facilitar a leitura e interpretação.
+
+  ### LEFT JOIN
+    O foco está na tabela da esquerda. Serão retornados todos os registros da tabela da esquerda e os valores correspondentes da direita, caso existam. Valores sem correspondência são exibidos como nulos.
+
+  ### RIGHT JOIN
+    O foco está na tabela da esquerda. Serão retornados todos os registros da tabela da direita e os valores correspondentes da esquerda, caso existam. Valores sem correspondência são exibidos como nulos.
