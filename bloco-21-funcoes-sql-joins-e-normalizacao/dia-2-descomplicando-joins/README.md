@@ -24,3 +24,6 @@
 
   ### RIGHT JOIN
     O foco está na tabela da esquerda. Serão retornados todos os registros da tabela da direita e os valores correspondentes da esquerda, caso existam. Valores sem correspondência são exibidos como nulos.
+
+  ### SELF JOIN
+    Faz pesquisas e comparações dentro da própria tabela. Você pode utilizar qualquer dos tipos de JOIN ao usar o SELF JOIN.
