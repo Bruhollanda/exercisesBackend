@@ -8,5 +8,8 @@
     "start": "node index.js"
   },
   "author": "Bruna Holanda",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
