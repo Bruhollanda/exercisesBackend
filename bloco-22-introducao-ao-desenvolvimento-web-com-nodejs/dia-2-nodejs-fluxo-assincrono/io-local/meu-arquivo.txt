@@ -1,0 +1,9 @@
+Lendo arquivos com métodos assíncronos utilizando o fs.readFile
+
+O método fornecido pelo módulo fs para leitura assíncrona de arquivos
+é o fs.readFile. Na versão padrão do fs, a função readFile aceita um callback,
+chamado quando a leitura do arquivo termina.
+
+Também pode ser utilizado retornando Promises.
+Para utilizar a interface de Promises do fs,
+precisamos alterar a importação do módulo fs para ('fs').promises.
