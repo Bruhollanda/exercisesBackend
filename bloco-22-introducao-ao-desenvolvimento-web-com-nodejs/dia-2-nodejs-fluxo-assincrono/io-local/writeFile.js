@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 
-fs.writeFile('./meu-arquivo.txt', 'Meu textão')
+fs.writeFile('./meu-arquivo.txt', 'Meu textão'/*, { flag: 'wx' } abre o arquivo para escrita **apenas** caso ele não exista.*/)
   /*
     Recebe como parâmetro o arquivo a ser editado
     e o texto que será colocado no arquivo
