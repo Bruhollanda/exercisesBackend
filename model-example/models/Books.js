@@ -1,6 +1,7 @@
 // models/Books.js
 
 const connection = require('./connection');
+const Author = require('./Author');
 
 const getByAuthorId = async (authorId) => {
   const query = 'SELECT * FROM model_example.books WHERE author_id=?;';
@@ -27,6 +28,18 @@ const getAll = async () => {
   }));
 };
 
+const isValid = (title, authorId) => {
+	if (!title || typeof title !== 'string' || title.length < 3) return false;
+  if (!authorId || typeof authorId !== 'number' || !(await Author.findById(authorId))) return false;
+
+  return true;
+};
+
+const create = async (title, authorId) => connection.execute(
+  'INSERT INTO model_example.books (title, author_id) VALUES (?,?)',
+  [title, authorId],
+  );
+
 module.exports = {
-  getAll, getByAuthorId,
+  getAll, getByAuthorId, isValid, create
 };
